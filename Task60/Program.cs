@@ -43,6 +43,5 @@ void PrintMatrix(int[,,] matrix)
             }
             Console.WriteLine();
         }
-        // Console.WriteLine();
     }
 }
