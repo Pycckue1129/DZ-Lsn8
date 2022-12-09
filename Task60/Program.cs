@@ -25,20 +25,6 @@ int[,,] FillMatrix(int rows, int colums, int dept)
                 matrix[i, j, k] = num;
                 step += 10;
                 step2 += 10;
-
-                // for (int i1 = 0; i < matrix.GetLength(0); i1++)
-                // {
-                //     for (int j1 = 0; j < matrix.GetLength(1); j1++)
-                //     {
-                //         for (int k1 = 0; k < matrix.GetLength(1); k1++)
-                //         {
-                //             if(num == matrix[i1, j1, k1])
-                //             {
-                //                 matrix[i, j, k1] = rnd.Next(10, 20);
-                //             }
-                //         }
-                //     }
-                // }
             }
         }
     }
