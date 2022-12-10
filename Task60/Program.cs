@@ -8,23 +8,60 @@
 
 int[,,] array = FillMatrix(2, 2, 2);
 PrintMatrix(array);
+ArrayCheck(array);
+System.Console.WriteLine();
+PrintMatrix(array);
+
+void ArrayCheck(int[,,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            for (int k = 0; k < array.GetLength(2); k++)
+            {
+                for (int i1 = 0; i1 < array.GetLength(0); i1++)
+                {
+                    for (int j1 = 0; j1 < array.GetLength(1); j1++)
+                    {
+                        for (int k1 = 0; k1 < array.GetLength(2); k1++)
+                        {
+                            if(array[i, j, k] == array[i1, j1, k1])
+                            {
+                                if(i == i1 && j == j1 && k == k1)
+                                {
+
+                                }
+                                else
+                                {
+                                array[i, j, k] = new Random().Next(10, 20);
+                                ArrayCheck(array);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 int[,,] FillMatrix(int rows, int colums, int dept)
 {
     int[,,] matrix = new int[rows, colums, dept];
     Random rnd = new Random();
-    int step = 10;
-    int step2 = 20;
+    // int step = 10;
+    // int step2 = 20;
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            for (int k = 0; k < matrix.GetLength(1); k++)
+            for (int k = 0; k < matrix.GetLength(2); k++)
             {
-                int num = rnd.Next(step, step2);
+                int num = rnd.Next(10, 20);
                 matrix[i, j, k] = num;
-                step += 10;
-                step2 += 10;
+                // step += 10;
+                // step2 += 10;
             }
         }
     }
